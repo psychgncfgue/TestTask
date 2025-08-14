@@ -1,0 +1,128 @@
+{
+    "register": {
+        "title": "Register",
+        "email": "Email",
+        "username": "Username",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "phone": "Phone",
+        "registerButton": "Register",
+        "alreadyHaveAccount": "Already have an account? Login",
+        "invalidEmail": "Invalid email",
+        "requiredEmail": "Email is required",
+        "requiredUsername": "Username is required",
+        "usernamePattern": "3–20 Latin letters or numbers",
+        "requiredPassword": "Password is required",
+        "passwordMin": "At least 6 characters",
+        "passwordMismatch": "Passwords do not match",
+        "requiredPhone": "Phone is required",
+        "invalidPhone": "Invalid phone number",
+        "networkError": "Network error"
+    },
+    "auth": {
+        "title": "Login",
+        "email": "Email",
+        "password": "Password",
+        "login": "Sign In",
+        "loginGoogle": "Sign in with Google",
+        "register": "Register",
+        "loginError": "Login error"
+    },
+    "dashboard": {
+        "title": "My Movies",
+        "weekly_films": "Movies of the Week"
+    },
+    "menu": {
+        "home": "Home",
+        "orders": "Orders",
+        "products": "Products",
+        "purchased": "Purchased",
+        "account": "Account"
+    },
+    "top_menu": {
+        "active_tabs": "Active Tabs",
+        "connections": "Unique tabs",
+        "all_tabs": "All Tabs"
+    },
+    "account": {
+        "title": "My Account",
+        "username": "Username",
+        "email": "Email",
+        "new_password": "New Password",
+        "2fa": "Two‑Factor Authentication",
+        "link_card": "Link Card",
+        "placeholder_username": "Placeholder",
+        "placeholder_email": "user@example.com",
+        "password_change": "Password change",
+        "password_change_confirm": "To change your password, you need to confirm your identity via email.",
+        "email_code_sent": "A message with a code has been sent to your email.",
+        "send_email_message": "Send email message",
+        "change_password": "Change password",
+        "logout": "Logout",
+        "passwords_not_match": "Passwords do not match",
+        "password_confirm_and_set": "Confirm and Set Password",
+        "enter_code_and_new_password": "Enter the 6‑digit code and choose a new password",
+        "password_changed_successfully": "Password changed successfully",
+        "password": {
+            "confirm": "Confirm Password",
+            "save": "Save"
+        },
+        "common": {
+            "cancel": "Cancel"
+        }
+    },
+    "search": {
+        "placeholder": "Search for movies...",
+        "no_results": "No results found.",
+        "info": "Here will be displayed searched movies."
+    },
+    "favorites": {
+        "no_favorites": "Favorites is empty",
+        "add_to_favorites": "Add to favorites",
+        "in_favorites": "Already in favorites"
+    },
+    "common": {
+        "cancel": "Cancel",
+        "buy_movie": "Buy movie"
+    },
+    "weekdays": {
+        "sunday": "Sunday",
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday"
+    },
+    "product": {
+        "loading": "Products / loading...",
+        "products_with_count": "Products / {{count}}",
+        "type_label": "Product Type",
+        "type_all": "All",
+        "status": "Status",
+        "status_new": "New",
+        "status_used": "Used",
+        "guarantee": "Guarantee",
+        "specification": "Specification",
+        "price": "Price",
+        "date": "Date",
+        "open_menu": "Open menu"
+    },
+    "orders": {
+        "title": "Orders",
+        "loading": "Orders / loading...",
+        "orders_with_count": "Orders / {{count}}",
+        "details_title": "Order details №{{id}}",
+        "close_details": "Close order details",
+        "date": "Date",
+        "total_amount": "Total amount:",
+        "products_in_order": "Products in order:",
+        "status": "Status",
+        "status_new": "New",
+        "status_used": "Used",
+        "delete_product_aria_label": "Delete {{title}}",
+        "confirm_delete_title": "Confirm delete",
+        "confirm_delete_description": "Are you sure you want to remove this product from the order?",
+        "delete": "Delete"
+    }
+}

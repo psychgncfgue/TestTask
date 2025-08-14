@@ -1,0 +1,62 @@
+.top-menu {
+  position: fixed;
+  width: 100%;
+}
+
+.top-menu__toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-menu__left {
+  display: flex;
+  align-items: center;
+}
+
+.top-menu__menu-button {
+  margin-right: 16px;
+  display: none;
+}
+
+@media (max-width:599.95px) {
+  .top-menu__menu-button {
+    display: inline-flex;
+  }
+}
+
+@media (min-width:600px) {
+  .top-menu__menu-button {
+    display: none;
+  }
+}
+
+.top-menu__center {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin-left: auto;
+}
+
+@media (max-width:599.95px) {
+  .top-menu__backend {
+    display: none;
+  }
+}
+
+@media (min-width:600px) and (max-width:959.95px) {
+  .top-menu__backend {
+    display: none;
+  }
+}
+
+@media (min-width:960px) {
+  .top-menu__backend {
+    display: flex;
+  }
+}
+
+.top-menu__right {
+  display: flex;
+  align-items: center;
+}

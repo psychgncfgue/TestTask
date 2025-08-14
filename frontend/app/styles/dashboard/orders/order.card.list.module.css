@@ -1,0 +1,43 @@
+.orders-cards-list {
+  width: 600px;
+  margin-bottom: 32px;
+}
+
+
+.orders-cards-list__pagination {
+  margin-top: 32px; 
+}
+
+.orders-cards-list.shifted {
+  transform: translateX(-400px);
+}
+
+@media (max-width: 1550) {
+    .orders-cards-list {
+      width: 450px;
+    }
+}
+
+@media (max-width: 1300) {
+    .orders-cards-list {
+      width: 450px;
+    }
+}
+
+@media (max-width: 1350) {
+    .orders-cards-list {
+      width: 350px;
+    }
+}
+
+@media (max-width: 1200) {
+    .orders-cards-list {
+      width: 450px;
+    }
+}
+
+@media (max-width: 750) {
+    .orders-cards-list {
+      width: 100%;
+    }
+}

@@ -1,0 +1,128 @@
+{
+    "register": {
+        "title": "Регистрация",
+        "email": "Email",
+        "username": "Имя пользователя",
+        "password": "Пароль",
+        "confirmPassword": "Подтвердите пароль",
+        "phone": "Телефон",
+        "registerButton": "Зарегистрироваться",
+        "alreadyHaveAccount": "Уже есть аккаунт? Войти",
+        "invalidEmail": "Неверный email",
+        "requiredEmail": "Email обязателен",
+        "requiredUsername": "Username обязателен",
+        "usernamePattern": "3–20 латинских букв или цифр",
+        "requiredPassword": "Пароль обязателен",
+        "passwordMin": "Не менее 6 символов",
+        "passwordMismatch": "Пароли не совпадают",
+        "requiredPhone": "Телефон обязателен",
+        "invalidPhone": "Неверный номер телефона",
+        "networkError": "Ошибка сети"
+    },
+    "auth": {
+        "title": "Авторизация",
+        "email": "Email",
+        "password": "Пароль",
+        "login": "Войти",
+        "loginGoogle": "Войти через Google",
+        "register": "Зарегистрироваться",
+        "loginError": "Ошибка входа"
+    },
+    "dashboard": {
+        "title": "Мои фильмы",
+        "weekly_films": "Фильмы недели"
+    },
+    "menu": {
+        "home": "Главная",
+        "orders": "Заказы",
+        "products": "Продукты",
+        "purchased": "Купленные",
+        "account": "Аккаунт"
+    },
+    "top_menu": {
+        "active_tabs": "Активные вкладки",
+        "connections": "Уникальные вкладки",
+        "all_tabs": "Все вкладки"
+    },
+    "account": {
+        "title": "Мой аккаунт",
+        "username": "Имя пользователя",
+        "email": "Электронная почта",
+        "new_password": "Новый пароль",
+        "2fa": "Двухфакторная аутентификация",
+        "link_card": "Привязать карту",
+        "placeholder_username": "Псевдоним",
+        "placeholder_email": "user@example.com",
+        "password_change": "Смена пароля",
+        "password_change_confirm": "Для смены пароля необходимо подтвердить личность через email.",
+        "email_code_sent": "Сообщение с кодом отправлено на вашу почту.",
+        "send_email_message": "Отправить письмо",
+        "change_password": "Изменить пароль",
+        "logout": "Выйти",
+        "passwords_not_match": "Пароли не совпадают",
+        "password_confirm_and_set": "Подтвердить и установить пароль",
+        "enter_code_and_new_password": "Введите 6‑значный код и выберите новый пароль",
+        "password_changed_successfully": "Пароль успешно изменён",
+        "password": {
+            "confirm": "Подтвердите пароль",
+            "save": "Сохранить"
+        },
+        "common": {
+            "cancel": "Отмена"
+        }
+    },
+    "search": {
+        "placeholder": "Поиск фильмов...",
+        "no_results": "Результаты не найдены.",
+        "info": "Здесь будут отображаться найденные фильмы."
+    },
+    "favorites": {
+        "no_favorites": "Список избранного пуст",
+        "add_to_favorites": "Добавить в избранное",
+        "in_favorites": "Уже в избранном"
+    },
+    "common": {
+        "cancel": "Отмена",
+        "buy_movie": "Купить фильм"
+    },
+    "weekdays": {
+        "sunday": "Воскресенье",
+        "monday": "Понедельник",
+        "tuesday": "Вторник",
+        "wednesday": "Среда",
+        "thursday": "Четверг",
+        "friday": "Пятница",
+        "saturday": "Суббота"
+    },
+    "product": {
+        "loading": "Продукты / загрузка...",
+        "products_with_count": "Продукты / {{count}}",
+        "type_label": "Тип продукта",
+        "type_all": "Все",
+        "status": "Статус",
+        "status_new": "Новое",
+        "status_used": "Б/у",
+        "guarantee": "Гарантия",
+        "specification": "Спецификация",
+        "price": "Цена",
+        "date": "Дата",
+        "open_menu": "Открыть меню"
+    },
+    "orders": {
+        "title": "Заказы",
+        "loading": "Заказы / загрузка...",
+        "orders_with_count": "Заказы / {{count}}",
+        "details_title": "Детали заказа №{{id}}",
+        "close_details": "Закрыть детали заказа",
+        "date": "Дата",
+        "total_amount": "Общая сумма:",
+        "products_in_order": "Товары в заказе:",
+        "status": "Статус",
+        "status_new": "Новое",
+        "status_used": "Б/у",
+        "delete_product_aria_label": "Удалить {{title}}",
+        "confirm_delete_title": "Подтверждение удаления",
+        "confirm_delete_description": "Вы уверены, что хотите удалить этот товар из заказа?",
+        "delete": "Удалить"
+    }
+}

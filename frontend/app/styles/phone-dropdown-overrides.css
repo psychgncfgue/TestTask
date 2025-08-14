@@ -1,0 +1,9 @@
+.my-phone-dropdown li.country.highlight,
+.my-phone-dropdown li.country.active.highlight {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+.my-phone-dropdown li.country:hover {
+  background-color: transparent !important;
+}

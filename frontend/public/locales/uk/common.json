@@ -1,0 +1,128 @@
+{
+    "register": {
+        "title": "Реєстрація",
+        "email": "Email",
+        "username": "Ім'я користувача",
+        "password": "Пароль",
+        "confirmPassword": "Підтвердіть пароль",
+        "phone": "Телефон",
+        "registerButton": "Зареєструватися",
+        "alreadyHaveAccount": "Вже є акаунт? Увійти",
+        "invalidEmail": "Невірний email",
+        "requiredEmail": "Email обов'язковий",
+        "requiredUsername": "Ім'я користувача обов'язкове",
+        "usernamePattern": "3–20 латинських літер або цифр",
+        "requiredPassword": "Пароль обов'язковий",
+        "passwordMin": "Не менше 6 символів",
+        "passwordMismatch": "Паролі не співпадають",
+        "requiredPhone": "Телефон обов'язковий",
+        "invalidPhone": "Невірний номер телефону",
+        "networkError": "Помилка мережі"
+    },
+    "auth": {
+        "title": "Авторизація",
+        "email": "Email",
+        "password": "Пароль",
+        "login": "Увійти",
+        "loginGoogle": "Увійти через Google",
+        "register": "Зареєструватися",
+        "loginError": "Помилка входу"
+    },
+    "dashboard": {
+        "title": "Мої фільми",
+        "weekly_films": "Фільми тижня"
+    },
+    "menu": {
+        "home": "Головна",
+        "orders": "Замовлення",
+        "products": "Продукти",
+        "purchased": "Придбані",
+        "account": "Обліковий запис"
+    },
+    "top_menu": {
+        "active_tabs": "Активні вкладки",
+        "connections": "Унікальні влкадки",
+        "all_tabs": "Усі вкладки"
+    },
+    "account": {
+        "title": "Мій обліковий запис",
+        "username": "Ім'я користувача",
+        "email": "Електронна пошта",
+        "new_password": "Новий пароль",
+        "2fa": "Двофакторна автентифікація",
+        "link_card": "Прив’язати карту",
+        "placeholder_username": "Псевдонім",
+        "placeholder_email": "user@example.com",
+        "password_change": "Зміна пароля",
+        "password_change_confirm": "Для зміни пароля потрібно підтвердити особу через email.",
+        "email_code_sent": "Повідомлення з кодом надіслано на вашу пошту.",
+        "send_email_message": "Надіслати лист",
+        "change_password": "Змінити пароль",
+        "logout": "Вийти",
+        "passwords_not_match": "Паролі не співпадають",
+        "password_confirm_and_set": "Підтвердити та встановити пароль",
+        "enter_code_and_new_password": "Введіть 6‑значний код і оберіть новий пароль",
+        "password_changed_successfully": "Пароль успішно змінено",
+        "password": {
+            "confirm": "Підтвердьте пароль",
+            "save": "Зберегти"
+        },
+        "common": {
+            "cancel": "Скасувати"
+        }
+    },
+    "search": {
+        "placeholder": "Пошук фільмів...",
+        "no_results": "Результатів не знайдено.",
+        "info": "Тут будуть відображатися знайдені фільми."
+    },
+    "favorites": {
+        "no_favorites": "Вибране порожнє",
+        "add_to_favorites": "Додати у вибране",
+        "in_favorites": "Вже у вибраному"
+    },
+    "common": {
+        "cancel": "Скасувати",
+        "buy_movie": "Купити фільм"
+    },
+    "weekdays": {
+        "sunday": "Неділя",
+        "monday": "Понеділок",
+        "tuesday": "Вівторок",
+        "wednesday": "Середа",
+        "thursday": "Четвер",
+        "friday": "П’ятниця",
+        "saturday": "Субота"
+    },
+    "product": {
+        "loading": "Продукти / завантаження...",
+        "products_with_count": "Продукти / {{count}}",
+        "type_label": "Тип продукту",
+        "type_all": "Всі",
+        "status": "Статус",
+        "status_new": "Нове",
+        "status_used": "Вживане",
+        "guarantee": "Гарантія",
+        "specification": "Специфікація",
+        "price": "Ціна",
+        "date": "Дата",
+        "open_menu": "Відкрити меню"
+    },
+    "orders": {
+        "title": "Замовлення",
+        "loading": "Замовлення / завантаження...",
+        "orders_with_count": "Замовлення / {{count}}",
+        "details_title": "Деталі замовлення №{{id}}",
+        "close_details": "Закрити деталі замовлення",
+        "date": "Дата",
+        "total_amount": "Загальна сума:",
+        "products_in_order": "Товари у замовленні:",
+        "status": "Статус",
+        "status_new": "Нове",
+        "status_used": "Вживане",
+        "delete_product_aria_label": "Видалити {{title}}",
+        "confirm_delete_title": "Підтвердження видалення",
+        "confirm_delete_description": "Ви впевнені, що хочете видалити цей товар із замовлення?",
+        "delete": "Видалити"
+    }
+}

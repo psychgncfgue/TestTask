@@ -1,0 +1,121 @@
+.order-item {
+    border-radius: 8px;
+    height: 100px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-item:hover {
+    border-color: var(--mui-palette-primary-main);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.order-item__content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.order-item__row {
+    flex-grow: 1;
+    width: 100%;
+}
+
+
+.order-item--selected {
+  border-left: 4px solid #1976d2;
+  position: relative;
+}
+
+.order-item__selected-arrow {
+  font-size: 24px;
+  width: 24px;
+  color: #1976d2;
+  user-select: none;
+  text-align: end;
+}
+
+.order-item__delete--selected {
+    display: none;
+}
+
+.order-item__content--selected {
+    padding-left: 12px;
+}
+
+.order-item__menu-sidebar
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #6d6a6a; 
+    border-radius: 50%;
+    padding: 6px; 
+    width: 36px;
+    height: 36px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.order-item__menu-sidebar:hover
+{
+    border-color: var(--mui-palette-primary-main);
+    background-color: rgba(0,0,0,0.04);
+}
+
+.order-item__products {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-direction: column;
+}
+
+.order-item__products-count {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-direction: row;
+}
+
+.order-item__date {
+    white-space: nowrap;
+}
+
+.order-item__prices {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+}
+
+@media (max-width: 1550px) {
+    .order-item__prices {
+        display: none;
+    }
+}
+
+@media (max-width: 1350px) {
+    .order-item__date {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .order-item__date {
+        display: flex;
+    }
+}
+
+@media (max-width: 1200px) {
+    .order-item__menu-sidebar {
+        display: none;
+    }
+    .order-item__delete {
+        display: none;
+    }
+
+    .order-item__title {
+      display: flex;
+    }
+}
+

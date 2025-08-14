@@ -1,0 +1,127 @@
+.order-details-modal {
+  display: none;
+}
+
+.order-details-modal__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90vw;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 16px;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-details-modal__product-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-bottom-width 0.3s ease;
+  margin-bottom: 10px;
+  overflow-x: hidden;
+}
+
+.order-details-modal__product-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transform: scale(1.02);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.order-details-modal__product-item:not(:last-child) {
+  border-bottom: 1px solid gray;
+}
+
+.order-details-modal__price {
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.order-details-modal__price-right {
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+}
+
+.product-avatar {
+  min-width: 48px;
+  min-height: 48px;
+  margin-right: 16px;
+  padding-left: 6px;
+}
+
+.product-title {
+  white-space: normal; 
+  overflow-wrap: break-word; 
+  word-break: break-word;
+}
+
+.product-status {
+  display: flex;
+  white-space: nowrap; 
+  overflow: hidden;
+  margin-right: 16px;
+  margin-left: 32px;
+  width: 100px;
+  justify-content: center;
+}
+
+.product-avatar__image {
+  width: auto;
+  border-radius: 4px;
+}
+
+.product-delete {
+  margin-right: 16px;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+}
+
+.order-details-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* Scrollbar Styles */
+.order-details-modal__content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.order-details-modal__content::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color);
+}
+
+.order-details-modal__content::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color);
+  border-radius: 4px;
+}
+
+/* Firefox Scrollbar */
+.order-details-modal__content {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+}
+
+@media (max-width: 1200px) {
+  .order-details-modal {
+    display: block;
+    z-index: 1300; 
+  }
+}
