@@ -36,7 +36,7 @@ interface OrderDetailsSidebarProps {
 
 const itemVariants: Variants = {
   visible: { opacity: 1, x: 0 },
-  removed: { opacity: 0, x: 400, transition: { duration: 0.5, ease: "easeInOut" } },
+  removed: { opacity: 0, x: 800, transition: { duration: 0.5, ease: "easeInOut" } },
 };
 
 export default function OrderDetailsSidebar({ order, onClose, isOpen = false }: OrderDetailsSidebarProps) {
