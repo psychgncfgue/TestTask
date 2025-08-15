@@ -27,7 +27,7 @@ export default async function DashboardPage() {
     <Box sx={{ minHeight: '100%', p: 3, mt: 10 }}>
       <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', pt: 10, pb: 10, mb: 10, borderBottom: '1px solid gray' }}>
       <Typography variant="h4" gutterBottom>
-        Dashboard. This is a simple SSR example using a Chart.js component.
+        Это пример SSR компонента Chart.js. Запрос данных для графтка в серверном компоненте.
       </Typography>
       </Box>
       <DashboardProductChartWrapper initialData={initialData} />

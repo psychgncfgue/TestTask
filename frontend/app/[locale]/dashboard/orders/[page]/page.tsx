@@ -55,9 +55,11 @@ export default function OrdersListContainer() {
                 <Typography variant="h5" className={styles['orders-list-container__title']}>
                     {t('orders.loading')}
                 </Typography>
+                <Box className={styles['orders-skeleton-container']}>
                 {[...Array(5)].map((_, i) => (
                     <OrderItemSkeleton key={i} />
                 ))}
+                </Box>
             </Box>
         );
     }

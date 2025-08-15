@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useState } from 'react';
 import {
   Paper,
@@ -14,8 +16,9 @@ import {
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import { Snackbar, Alert } from '@mui/material';
+import { AnimatePresence, motion, Variants } from 'framer-motion';
 import { Order } from '@/app/types/orders';
-import styles from '../../styles/dashboard/orders/order.details.sidebar.module.css';
 import { Product } from '@/app/types/products';
 import { useAppDispatch, useAppSelector } from '@/app/redux/store';
 import { deleteProductFromOrder } from '@/app/redux/thunks/ordersThunks';
@@ -23,6 +26,7 @@ import OverlayLoader from '../loaders/OverlayLoader';
 import ConfirmDeleteProductDialog from './ConfirmDeleteProductDialog.tsx';
 import { setSelectedSidebarOrderId } from '@/app/redux/slices/ordersSlice';
 import { useTranslation } from 'react-i18next';
+import styles from '../../styles/dashboard/orders/order.details.sidebar.module.css';
 
 interface OrderDetailsSidebarProps {
   order: Order;
@@ -30,12 +34,19 @@ interface OrderDetailsSidebarProps {
   isOpen?: boolean;
 }
 
+const itemVariants: Variants = {
+  visible: { opacity: 1, x: 0 },
+  removed: { opacity: 0, x: 400, transition: { duration: 0.5, ease: "easeInOut" } },
+};
+
 export default function OrderDetailsSidebar({ order, onClose, isOpen = false }: OrderDetailsSidebarProps) {
   const { productDeleteLoading } = useAppSelector(state => state.orders);
   const dispatch = useAppDispatch();
   const products: Product[] = order.products ?? [];
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [productToDelete, setProductToDelete] = useState<Product | null>(null);
+  const [animatedProducts, setAnimatedProducts] = useState<Product[]>(products);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
   const isMobile = useMediaQuery('(max-width:1200px)');
   const { t } = useTranslation();
 
@@ -44,6 +55,14 @@ export default function OrderDetailsSidebar({ order, onClose, isOpen = false }: 
       dispatch(setSelectedSidebarOrderId(null));
     }
   }, [isMobile, dispatch]);
+
+  useEffect(() => {
+    setAnimatedProducts(products);
+  }, []);
+
+  useEffect(() => {
+    setAnimatedProducts(products);
+  }, [order.id]);
 
   const openConfirm = (product: Product) => {
     setProductToDelete(product);
@@ -56,12 +75,24 @@ export default function OrderDetailsSidebar({ order, onClose, isOpen = false }: 
   };
 
   const confirmDelete = () => {
-    if (productToDelete) {
-      dispatch(deleteProductFromOrder(order.id, productToDelete.id, productToDelete.price));
-    }
-    closeConfirm();
-  };
+    if (!productToDelete) return;
 
+    closeConfirm();
+
+    setTimeout(() => {
+      setAnimatedProducts(prev =>
+        prev.filter(p => p.id !== productToDelete.id)
+      );
+
+      setTimeout(() => {
+        dispatch(deleteProductFromOrder(order.id, productToDelete.id, productToDelete.price));
+
+        setSnackbarOpen(true);
+
+        setTimeout(() => setSnackbarOpen(false), 3500);
+      }, 500);
+    }, 1000);
+  };
 
   return (
     <>
@@ -87,9 +118,7 @@ export default function OrderDetailsSidebar({ order, onClose, isOpen = false }: 
         </Typography>
 
         <Box className={styles['order-details-sidebar__price']}>
-          <Typography variant="subtitle1">
-            {t('orders.total_amount')}
-          </Typography>
+          <Typography variant="subtitle1">{t('orders.total_amount')}</Typography>
           <Box className={styles['order-details-sidebar__price-right']}>
             <Typography variant="subtitle2" fontWeight={600}>
               {order.totalUSD ?? '—'} $
@@ -100,7 +129,6 @@ export default function OrderDetailsSidebar({ order, onClose, isOpen = false }: 
           </Box>
         </Box>
 
-
         <Divider />
 
         <Typography variant="subtitle2" mt={2} mb={1}>
@@ -109,36 +137,58 @@ export default function OrderDetailsSidebar({ order, onClose, isOpen = false }: 
 
         <OverlayLoader visible={productDeleteLoading} />
         <List>
-          {products.map((prod) => (
-            <ListItem
-              className={styles['order-details-sidebar__product-item']}
+          <AnimatePresence>
+          {animatedProducts.map(prod => (
+            <motion.div
               key={prod.id}
-              disableGutters
+              initial="visible"
+              animate="visible"
+              exit="removed"
+              variants={itemVariants}
+              onAnimationComplete={(definition) => {
+                if (definition === "removed") {
+                  setAnimatedProducts(prev => prev.filter(p => p.id !== prod.id));
+                }
+              }}
             >
-              <ListItemAvatar className={styles['product-avatar']}>
-                <Avatar
-                  alt={prod.title}
-                  src={prod.photo}
-                  variant="square"
-                  className={styles['product-avatar__image']} />
-              </ListItemAvatar>
-              <ListItemText
-                primary={prod.title} />
-              <Typography variant="body2" mr={2}>
-                {t('orders.status')}: {prod.isNew ? t('orders.status_new') : t('orders.status_used')}
-              </Typography>
-              <IconButton
-                edge="end"
-                aria-label={t('orders.delete_product_aria_label', { title: prod.title })}
-                className={styles['product-delete']}
-                onClick={() => openConfirm(prod)}
+              <ListItem
+                className={styles['order-details-sidebar__product-item']}
+                disableGutters
               >
-                <DeleteOutlineIcon />
-              </IconButton>
-            </ListItem>
+                <ListItemAvatar className={styles['product-avatar']}>
+                  <Avatar
+                    alt={prod.title}
+                    src={prod.photo}
+                    variant="square"
+                    className={styles['product-avatar__image']}
+                  />
+                </ListItemAvatar>
+                <ListItemText primary={prod.title} />
+                <Typography variant="body2" mr={2}>
+                  {t('orders.status')}: {prod.isNew ? t('orders.status_new') : t('orders.status_used')}
+                </Typography>
+                <IconButton
+                  edge="end"
+                  aria-label={t('orders.delete_product_aria_label', { title: prod.title })}
+                  className={styles['product-delete']}
+                  onClick={() => openConfirm(prod)}
+                >
+                  <DeleteOutlineIcon />
+                </IconButton>
+              </ListItem>
+            </motion.div>
           ))}
+          </AnimatePresence>
         </List>
       </Paper>
+      <Snackbar
+        open={snackbarOpen}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
+        <Alert severity="success" sx={{ width: '100%' }}>
+          {t('orders.product_deleted_success')}
+        </Alert>
+      </Snackbar>
       <ConfirmDeleteProductDialog
         open={confirmOpen}
         onClose={closeConfirm}

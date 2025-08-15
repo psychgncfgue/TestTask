@@ -10,7 +10,7 @@
   background-color: var(--mui-palette-background-paper);
   user-select: none;
   pointer-events: none;
-  height: 125px;
+  height: 120px;
 }
 
 .status-indicator {
@@ -99,7 +99,7 @@
   .product-item {
     width: 100%;
     padding: 0;
-    height: 105px;
+    height: 95px;
   }
 
   .product-item__media {
@@ -114,5 +114,13 @@
 
   .product-item__content > *:not(:first-child) {
     display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .product-item {
+    width: 351px;
+    padding-right: 0px;
+    height: 95px;
   }
 }

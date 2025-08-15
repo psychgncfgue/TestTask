@@ -26,11 +26,14 @@
         "login": "Sign In",
         "loginGoogle": "Sign in with Google",
         "register": "Register",
-        "loginError": "Login error"
+        "loginError": "Login error",
+    "oauth_redirect_title": "Redirecting...",
+    "oauth_redirect_message": "Logging you in..."
     },
     "dashboard": {
         "title": "My Movies",
-        "weekly_films": "Movies of the Week"
+        "weekly_films": "Movies of the Week",
+        "ssr_chart_title": "Dashboard. SSR example with Chart.js."
     },
     "menu": {
         "home": "Home",
@@ -123,6 +126,11 @@
         "delete_product_aria_label": "Delete {{title}}",
         "confirm_delete_title": "Confirm delete",
         "confirm_delete_description": "Are you sure you want to remove this product from the order?",
-        "delete": "Delete"
-    }
+        "delete": "Delete",
+        "product_deleted_success": "Product successfully deleted"
+    },
+      "animatedBoxes": {
+    "scroll_message": "Animated appearance of components when scrolling down.",
+    "lazyload_message": "Here’s a simple example of dynamic lazy loading."
+  }
 }

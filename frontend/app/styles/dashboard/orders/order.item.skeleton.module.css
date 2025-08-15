@@ -3,7 +3,7 @@
     height: 100px;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
     margin-bottom: 10px;
-    width: 800px;
+    width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -62,7 +62,7 @@
         display: none;
     }
     .order-item {
-        width: 700px;
+        width: 450px;
     }
 }
 
@@ -71,7 +71,16 @@
         display: none;
     }
     .order-item {
-        width: 600px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .order-item__delete {
+        display: none;
+    }
+    .order-item {
+        width: 450px;
     }
 }
 
@@ -90,9 +99,13 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
     .order-item__title {
         display: none;
+    }
+
+    .order_item {
+        width: 100%
     }
 }
 

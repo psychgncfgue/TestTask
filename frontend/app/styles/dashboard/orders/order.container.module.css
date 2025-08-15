@@ -6,6 +6,11 @@
   padding-right: 20px;
 }
 
+.orders-skeleton-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .orders-list-container {
   margin-top: 0;
   display: flex;
@@ -26,14 +31,18 @@
 }
 
 @media (max-width: 1000px) {
-  .orders-list-container {
+  .orders-list-container,
+  .orders-skeleton-container 
+   {
     padding-left: 40px;
     padding-right: 40px;
   }
 }
 
 @media (max-width: 600px) {
-  .orders-list-container {
+  .orders-list-container,
+  .orders-skeleton-container
+   {
     padding-left: 20px;
     padding-right: 20px;
   }

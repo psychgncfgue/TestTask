@@ -20,8 +20,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MyMovies",
-  description: "Управляйте своими фильмами и сериалами в одном месте!",
+  title: "Test Task",
+  description: "Тестовый проект для dZENCode",
 };
 
 interface RootLayoutProps {

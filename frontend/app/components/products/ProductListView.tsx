@@ -55,7 +55,7 @@ export default function ProductListView({
   if (isLoading) {
     return (
       <Box className={styles.products}>
-        <Typography variant="h5" mb={6} align="left" className={styles.products__title}>
+        <Typography variant="h5" align="left" className={styles['products-skeleton__title']}>
           {t('product.loading')}
         </Typography>
         <Box className={styles.products__list}>
